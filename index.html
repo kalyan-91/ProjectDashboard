@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analysis & Result Management System</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Crimson+Pro:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- SVG Definitions -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF8C5A;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <div class="nav-logo">SP</div>
+                <span class="nav-title">SPARMS</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="active">📊 Overview</a></li>
+                <li><a href="#documents">📄 Documents</a></li>
+                <li><a href="#progress">📈 Progress</a></li>
+                <li><a href="#timeline">🗓️ Timeline</a></li>
+                <li><a href="#team">👥 Team</a></li>
+                <li><a href="#modules">📦 Modules</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header id="overview">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-wrapper">
+                        <div class="logo">SP</div>
+                        <div>
+                            <h1>Student Performance Analysis<br>& Result Management System</h1>
+                            <div class="project-subtitle">Java Mini Project</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Team Size</span>
+                        <span class="meta-value">7 Members</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span class="status-badge">In Development</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Technology</span>
+                        <span class="meta-value">Java / MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Document Downloads -->
+        <div class="documents-section" id="documents">
+            <a href="../uploads/PROJECT_PLANNING.pdf" download class="doc-card">
+                <div class="doc-icon">📄</div>
+                <div class="doc-info">
+                    <div class="doc-title">Project Planning</div>
+                    <div class="doc-description">Complete project documentation & requirements</div>
+                    <div class="doc-meta">
+                        <span class="download-icon">⬇</span>
+                        <span>Download PDF</span>
+                    </div>
+                </div>
+            </a>
+            
+             
+        </div>
+
+        <!-- Progress Tracker Section -->
+        <div class="progress-tracker-section" id="progress">
+            <div class="progress-main-card">
+                <div class="progress-header">
+                    <div>
+                        <h2 class="progress-title">Project Progress</h2>
+                        <p class="progress-subtitle">Track development status across all modules</p>
+                    </div>
+                    <div class="overall-progress-circle">
+                        <svg viewBox="0 0 120 120" class="progress-ring">
+                            <circle class="progress-ring-bg" cx="60" cy="60" r="52" />
+                            <circle class="progress-ring-fill" cx="60" cy="60" r="52"
+                                style="stroke-dasharray: 326.73; stroke-dashoffset: 326.73;" />
+                        </svg>
+                        <div class="progress-percentage">
+                            <span class="percentage-value">0%</span>
+                            <span class="percentage-label">Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-progress-list">
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Student Management</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Subject Management</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Attendance Management</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Marks & Result Calculation</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Backlog Management</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">Database & JDBC Layer</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+
+                    <div class="module-progress-item">
+                        <div class="module-progress-info">
+                            <div class="module-progress-header">
+                                <span class="module-progress-name">UI & Integration</span>
+                                <span class="module-progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                        <span class="module-status-badge status-not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Timeline/Roadmap Section -->
+        <div class="timeline-section" id="timeline">
+            <div class="timeline-card">
+                <h2 class="section-title">Project Roadmap</h2>
+                <div class="roadmap-container">
+                    <div class="roadmap-line"></div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 1: Planning & Setup</div>
+                            <div class="roadmap-date">Week 1</div>
+                            <div class="roadmap-tasks">
+                                • Requirements gathering & documentation<br>
+                                • Team formation & role assignment<br>
+                                • Technology stack finalization<br>
+                                • GitHub repository setup
+                            </div>
+                            <div class="roadmap-status status-current">Current Phase</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 2: Database Design</div>
+                            <div class="roadmap-date">Week 2</div>
+                            <div class="roadmap-tasks">
+                                • Database schema design<br>
+                                • ER diagram creation<br>
+                                • MySQL database setup<br>
+                                • Table creation & relationships
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 3: Core Module Development</div>
+                            <div class="roadmap-date">Week 3</div>
+                            <div class="roadmap-tasks">
+                                • Student & Subject Management modules<br>
+                                • Attendance tracking system<br>
+                                • Marks & result calculation<br>
+                                • JDBC connectivity layer
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 4: Advanced Features</div>
+                            <div class="roadmap-date">Week 4</div>
+                            <div class="roadmap-tasks">
+                                • Backlog management system<br>
+                                • QR code & OMR integration<br>
+                                • Performance analysis module<br>
+                                • Alert & notification system
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 5: UI Development</div>
+                            <div class="roadmap-date">Week 5</div>
+                            <div class="roadmap-tasks">
+                                • Java Swing interface design<br>
+                                • Event handling implementation<br>
+                                • Role-based access control<br>
+                                • UI/UX refinement
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 6: Integration & Testing</div>
+                            <div class="roadmap-date">Week 6</div>
+                            <div class="roadmap-tasks">
+                                • Module integration<br>
+                                • End-to-end testing<br>
+                                • Bug fixing & optimization<br>
+                                • Performance tuning
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-marker">
+                            <div class="marker-dot final-dot"></div>
+                        </div>
+                        <div class="roadmap-content">
+                            <div class="roadmap-phase">Phase 7: Documentation & Deployment</div>
+                            <div class="roadmap-date">Week 7</div>
+                            <div class="roadmap-tasks">
+                                • Final documentation<br>
+                                • User manual creation<br>
+                                • Presentation preparation<br>
+                                • Project submission
+                            </div>
+                            <div class="roadmap-status status-upcoming">Upcoming</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" id="team">
+            <!-- Project Overview Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Project Overview</h2>
+                    <div class="card-icon">📊</div>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Modules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Java</div>
+                        <div class="stat-label">Core Tech</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">MySQL</div>
+                        <div class="stat-label">Database</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Members Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Team Members</h2>
+                    <div class="card-icon">👥</div>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="avatar">ER</div>
+                        <div class="member-info">
+                            <div class="member-name">E.N. Rachana</div>
+                            <div class="member-role">Student Management</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">BP</div>
+                        <div class="member-info">
+                            <div class="member-name">B. Priyadarshini</div>
+                            <div class="member-role">Subject Management</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">SS</div>
+                        <div class="member-info">
+                            <div class="member-name">Shaik Sohail Basha</div>
+                            <div class="member-role">Attendance Management</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">KT</div>
+                        <div class="member-info">
+                            <div class="member-name">K. Tarun</div>
+                            <div class="member-role">Marks & Result Calculation</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">MN</div>
+                        <div class="member-info">
+                            <div class="member-name">M. Narayana Swamy</div>
+                            <div class="member-role">Backlog Management</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">DP</div>
+                        <div class="member-info">
+                            <div class="member-name">D. Pavan Kalyan</div>
+                            <div class="member-role">Database & JDBC Layer</div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="avatar">SB</div>
+                        <div class="member-info">
+                            <div class="member-name">S. Bhavani</div>
+                            <div class="member-role">UI & Integration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Module Assignments Section -->
+        <div class="full-section" id="modules">
+            <h2 class="section-title">Module Assignments</h2>
+            <div class="module-list">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Student Management</div>
+                            <div class="module-tech">Java Development</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">ER</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">E.N. Rachana</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Student class design & registration<br>
+                        • Academic information storage<br>
+                        • Data validation & updates<br>
+                        • Student data provider for other modules
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\RACHANA.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Subject Management</div>
+                            <div class="module-tech">Java Development</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">BP</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">B. Priyadarshini</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Subject & SubjectRules class design<br>
+                        • Academic evaluation rules<br>
+                        • Subject mapping to academic structure<br>
+                        • Pass criteria & credit allocation
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\PRIYADARSHINI.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">3</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Attendance Management</div>
+                            <div class="module-tech">Java Development</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">SS</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">Shaik Sohail Basha</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Attendance class & calculator design<br>
+                        • Daily attendance recording<br>
+                        • Percentage calculation & eligibility check<br>
+                        • Attendance data sharing with backlog module
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\SHAIKSOHAILBASHA.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">4</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Marks & Result Calculation</div>
+                            <div class="module-tech">Java Development</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">KT</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">K. Tarun</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Marks class & validation<br>
+                        • Total marks calculation<br>
+                        • Pass/fail decision logic<br>
+                        • Grade assignment & semester results
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\TARUN.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">5</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Backlog Management</div>
+                            <div class="module-tech">Java Development</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">MN</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">M. Narayana Swamy</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Backlog class & service logic<br>
+                        • Automatic backlog detection<br>
+                        • Backlog recording & clearance tracking<br>
+                        • Backlog history maintenance
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\NARAYANASWAMY.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">6</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">Database & JDBC Layer</div>
+                            <div class="module-tech">Java + MySQL</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">DP</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">D. Pavan Kalyan</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • Database schema design<br>
+                        • JDBC connection & DAO classes<br>
+                        • SQL query implementation<br>
+                        • Data consistency & security
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\PAVANKALYAN.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+
+                <!-- Module 7 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-number">7</div>
+                        <div class="module-title-wrapper">
+                            <div class="module-name">UI & Integration</div>
+                            <div class="module-tech">Java Swing / HTML & CSS</div>
+                        </div>
+                    </div>
+                    <div class="module-assignee">
+                        <div class="small-avatar">SB</div>
+                        <div class="assignee-info">
+                            <div class="assignee-label">Assigned To</div>
+                            <div class="assignee-name">S. Bhavani</div>
+                        </div>
+                    </div>
+                    <div class="module-tasks">
+                        • User interface development<br>
+                        • Module integration & testing<br>
+                        • Performance analysis implementation<br>
+                        • Role-based access control
+                    </div>
+                    <a href="C:\Projects\DataAnalysisProjects\StudentPerformanceAnalysisAndResultManagementSystem\ModuleAssigment\BHAVANI.pdf" download class="view-tasks-btn">
+                        <span class="btn-icon">📄</span>
+                        <span>View My Tasks</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
